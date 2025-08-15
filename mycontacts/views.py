@@ -10,7 +10,16 @@ def show(request):
     """
     contact_list = Contact.objects.all()
     return render(request, 'mycontacts/show.html',{'contacts': contact_list})
-    
+
+def edit(request):
+    """ 
+    This function gets all the members in your Database through your Model
+    Any further usage please refer to: https://docs.djangoproject.com/el/1.10/ref/models/querysets/
+    """
+    contact_list = Contact.objects.all()
+    return render(request, 'mycontacts/edit.html',{'edits': contact_list})
+
+
 def add(request):
     """ This function is called to add one contact member to your contact list in your Database """
     if request.method == 'POST':
