@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-5ah3trzu*lql^&ztorah@97kv0bd5^4*c-*41w6*rdrn$95u8o
 DEBUG = True
 
 # ALLOWED_HOSTS = ['pedroodake.pythonanywhere.com', '127.0.0.1']
- ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
