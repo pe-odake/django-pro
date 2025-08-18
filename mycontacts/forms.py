@@ -6,3 +6,9 @@ class AddForm(forms.Form):
     class Meta:
         model = Contact
         fields = ('name', 'relation', 'phone', 'email',)
+        
+class EditForm(forms.Form):
+    
+    class Meta:
+        model = Contact
+        fields = ('name', 'relation', 'phone', 'email',)
