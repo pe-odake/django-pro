@@ -1,0 +1,124 @@
+/* Paleta de cores atualizada */
+:root {
+  --azul-escuro: #0a192f;
+  --azul-medio: #1f4068;
+  --azul-claro: #2c5d98;
+  --branco: #ffffff;
+  --cinza-claro: #f0f4f8;
+  --cinza-medio: #a8b2d1;
+}
+
+/* Reset de estilos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* Estilos do corpo da página com Flexbox para o rodapé */
+body {
+  background-color: var(--cinza-claro);
+  color: var(--azul-escuro);
+  line-height: 1.6;
+  min-height: 100vh; /* Garante que o corpo tenha pelo menos a altura da tela */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Cabeçalho */
+header {
+  background-color: var(--azul-escuro);
+  color: var(--branco);
+  padding: 1.5rem 2rem;
+  text-align: center;
+  /* Divisão visual */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+}
+
+/* Container principal com mais espaçamento */
+.container {
+  flex: 1; /* Permite que o container se expanda, empurrando o rodapé para baixo */
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem; /* Mais espaçamento entre os cards */
+}
+
+/* Estilo dos cards com mais branco */
+.card {
+  background: var(--branco);
+  color: var(--azul-escuro);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+  flex: 1 1 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid var(--cinza-medio);
+}
+
+.card h2 {
+  color: var(--azul-medio);
+  margin-bottom: 1rem;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilo do botão */
+button {
+  background: var(--azul-medio);
+  color: var(--branco);
+  border: none;
+  padding: 0.8rem 1.8rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.2s;
+  margin-top: 1rem;
+}
+
+button:hover {
+  background: var(--azul-claro);
+  transform: scale(1.05);
+}
+
+/* Rodapé na parte inferior */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background: var(--azul-escuro);
+  color: var(--cinza-medio);
+  margin-top: auto; /* Garante que o rodapé seja empurrado para o final */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 400px;
+  }
+}
