@@ -60,7 +60,7 @@ def add(request):
         
         else:
             """ redirect to the same page if django_form goes wrong """
-            return render(request, 'mycontacts/add.html')
+            return redirect(show) 
     else:
         return render(request, 'mycontacts/add.html')
 
