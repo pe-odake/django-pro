@@ -14,7 +14,7 @@
             <div class="email"><a href='{{ contact.email }}'>{{ contact.email }}</a> </div>
         </div>
         <button class="edit"><a href="{% url 'edit_contact' contact.id %}">Editar</a></button>
-        <button class="delete"><a href="/delete/{{ contact.id }}">Deletar</a></button>
+        <button class="delete"><a href="{% url 'delete_contact' contact.id %}">Deletar</a></button>
     </li>
     {%  endfor %}
     
